@@ -27,7 +27,7 @@
                     <div class="row align-items-center">
                         <div class="col-6">
                             <div class="bar__module">
-                                <a href="index.html">
+                                <a href="index.php">
                                     <img class="logo-dark" alt="logo" src="img/sneakvert-logo.png" style="max-height: 8em;"/>
                                     <!-- <img class="logo logo-light" alt="logo" src="img/logo-light.png" /> -->
                                 </a>
@@ -43,7 +43,7 @@
                                     <div class="side-menu__module pos-vertical-center text-right">
                                         <ul class="menu-vertical">
                                             <li>
-                                                <a class="inner-link" href="/index.html">Home</a>
+                                                <a class="inner-link" href="/index.php">Home</a>
                                             </li>
                                             <br />
                                             <li>
@@ -107,27 +107,124 @@
                 </div>
                 <!--end of container-->
             </section>
-            <section class="bg--secondary text-center">
-                <div class="container">
-                  <div class="row">
-                      <div class="col-md-8 col-lg-6">
-                          <div class="cta">
-                              <h2>Convert Your Sneaker</h2>
-                              <p class="type--fine-print">or
-                                  <a href="index.html">purchase them here</a>
-                              </p>
-                          </div>
-                      </div>
-                  </div>
-                  <!--end of row-->
-                </div>
-                <!--end of container-->
-            </section>
-            <section class=" bg--secondary">
-                <div class="container">
+            <section class="unpad elaborate-form-1">
+                <div class="row row--gapless">
+                    <div class="col-md-6 height-50 bg--primary">
+                        <div class="pos-vertical-center clearfix row no-gutters justify-content-center">
+                            <div class="col-lg-8">
+                                <span class="h1">Sneaker Information</span>
+                                <p class="lead">
+                                    Enter information about your <i>current sneaker</i> and <i>size</i> to find out which size you should purchase for your next pair.
+                                </p>
+                                <form action="#" method="post">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                          <div class="input-select">
+                                              <?php
+                                                // Get cURL resource
+                                                $curl = curl_init();
+                                                // Set some options - we are passing in a useragent too here
+                                                curl_setopt_array($curl, [
+                                                  CURLOPT_RETURNTRANSFER => 1,
+                                                  CURLOPT_URL => 'http://108.61.158.17:8080/sneakers-list',
+                                                ]);
+                                                // Send the request & save response to $resp
+                                                $sneakers = json_decode(curl_exec($curl));
+                                                // Close request to clear up some resources
+                                                curl_close($curl);
+                                              ?>
+                                            	<select name="current_sneaker" required>
+                                            		<option value="">Select current sneaker</option>
+                                                <?php
+                                                  foreach($sneakers as $key => $value):
+                                                    echo '<option value="'.$value.'">'.$value.'</option>'; //close your tags!!
+                                                  endforeach;
+                                                ?>
+                                            	</select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                          <div class="input-select">
+                                              <select name="target_sneaker" required>
+                                                <option value="">Select target sneaker</option>
+                                                <?php
+                                                  foreach($sneakers as $key => $value):
+                                                    echo '<option value="'.$value.'">'.$value.'</option>'; //close your tags!!
+                                                  endforeach;
+                                                ?>
+                                              </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7 col-6">
+                                          <div class="input-number">
+                                            <input type="number" name="shoe_size" placeholder="shoe size" min="4" max="12" value="4" step="0.5"/>
+                                            <div class="input-number__controls">
+                                              <span class="input-number__increase"><i class="stack-up-open"></i></span>
+                                              <span class="input-number__decrease"><i class="stack-down-open"></i></span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-md-5 col-6">
+                                            <button type="submit" name="submit" class="btn btn--primary-1">Convert</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <?php
+                                  if(isset($_POST['submit'])){
+                                    $current_sneaker = $_POST['current_sneaker'];
+                                    $target_sneaker = $_POST['target_sneaker'];
+                                    $shoe_size = $_POST['shoe_size'];
 
+                                    // Post request to Sneakvert API
+                                    $ch = curl_init();
+
+                                    curl_setopt($ch, CURLOPT_URL,"http://108.61.158.17:8080/conversion");
+                                    curl_setopt($ch, CURLOPT_POST, 1);
+                                    curl_setopt($ch, CURLOPT_POSTFIELDS,
+                                                "current=" . $current_sneaker . "&target=" . $target_sneaker . "&size=" . $shoe_size);
+
+                                    // Receive server response ...
+                                    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                                    $server_output = curl_exec($ch);
+
+                                    // Parse json
+                                    $jsonData = rtrim($server_output, "\0");
+                                    $response = json_decode($jsonData);
+
+                                    curl_close ($ch);
+                                  }
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 height-50 bg--primary-1">
+                        <div class="pos-vertical-center clearfix row no-gutters justify-content-center">
+                            <div class="col-lg-8">
+                                <span class="h1 target_text">
+                                  <?php
+                                    if(isset($_POST['submit'])){
+                                      echo 'You currently wear an <br /><strong>' . $current_sneaker . ' (Size  ' .  $shoe_size . ') ';
+                                    }
+                                   ?>
+                                </span>
+                                <p class="lead">
+                                    <?php
+                                      if(isset($_POST['submit'])){
+                                        echo 'Based on our data and sneaker conversion analysis, we recommend an:';
+                                      }
+                                    ?>
+                                </p>
+                                  <?php
+                                    if(isset($_POST['submit'])){
+                                      echo '<span class="h1 result_text">';
+                                      echo $target_sneaker . ' <br/>(Size ' . $response->target_size . ')';
+                                      echo '</span>';
+                                    }
+                                   ?>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!--end of container-->
             </section>
             <section class="video video-1 text-center imagebg space--lg" data-overlay="3">
                 <div class="background-image-holder">
@@ -140,23 +237,26 @@
             <section class="text-center">
                 <div class="container">
                   <div class="row justify-content-center">
-                      <form action="http://mrare.us8.list-manage.com/subscribe/post-json?u=77142ece814d3cff52058a51f&amp;id=f300c9cce8&amp;c=?" data-success="Thanks for signing up.  Please check your inbox for a confirmation email." data-error="Please provide your email address." class="row justify-content-center form--active" novalidate="true">
-                          <div class="col-lg-7 col-md-8">
-                              <input class="validate-required validate-email" type="text" name="EMAIL" placeholder="Enter your email for our newsletter">
-                          </div>
-                          <div class="col-lg-3 col-md-4">
-                              <button type="submit" class="btn btn--primary type--uppercase">Subscribe</button>
-                          </div>
-                          <div class="col-md-12">
-                              <div class="input-checkbox"><input class="validate-required" type="checkbox" name="group[13737][1]" id="input-assigned-0"><label for="input-assigned-0"></label></div>
-                              <span>I have read and agree to the
-                                  <a href="#">terms and conditions</a>
-                              </span>
-                          </div>
-                          <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                              <input type="text" name="b_77142ece814d3cff52058a51f_f300c9cce8" tabindex="-1" value="">
-                          </div>
-                      </form>
+                    <div class="col-md-8 col-lg-6">
+                      <h2>Join our email newsletter</h2>
+                    </div>
+                    <form action="http://mrare.us8.list-manage.com/subscribe/post-json?u=77142ece814d3cff52058a51f&amp;id=f300c9cce8&amp;c=?" data-success="Thanks for signing up.  Please check your inbox for a confirmation email." data-error="Please provide your email address." class="row justify-content-center form--active" novalidate="true">
+                        <div class="col-lg-7 col-md-8">
+                            <input class="validate-required validate-email" type="text" name="EMAIL" placeholder="Enter your email for our newsletter">
+                        </div>
+                        <div class="col-lg-3 col-md-4">
+                            <button type="submit" class="btn btn--primary type--uppercase">Subscribe</button>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="input-checkbox"><input class="validate-required" type="checkbox" name="group[13737][1]" id="input-assigned-0"><label for="input-assigned-0"></label></div>
+                            <span>I have read and agree to the
+                                <a href="#">terms and conditions</a>
+                            </span>
+                        </div>
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                            <input type="text" name="b_77142ece814d3cff52058a51f_f300c9cce8" tabindex="-1" value="">
+                        </div>
+                    </form>
                   </div>
                 </div>
                 <!--end of container-->

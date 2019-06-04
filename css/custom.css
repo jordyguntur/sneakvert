@@ -1,1 +1,10 @@
 /*! Place your custom styles here */
+
+.target_text {
+    font-size: 2em;
+}
+
+.result_text {
+
+  font-weight: 900;
+}
