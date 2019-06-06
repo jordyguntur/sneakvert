@@ -41,11 +41,11 @@ $htmlHead = file_get_contents('head.html');
 $htmlFoot = file_get_contents('foot.html');
 
 
-if($emailMethod == 'phpmail'){ 
-  $transport = Swift_MailTransport::newInstance(); 
+if($emailMethod == 'phpmail'){
+  $transport = Swift_MailTransport::newInstance();
 }elseif($emailMethod == 'smtp'){
     $transport = Swift_SmtpTransport::newInstance( $outgoingServerAddress, $outgoingServerPort, $outgoingServerSecurity )
-    ->setUsername( $sendingAccountUsername )     
+    ->setUsername( $sendingAccountUsername )
     ->setPassword( $sendingAccountPassword );
 }
 
@@ -77,12 +77,8 @@ try{
   echo($mailer->send($message));
   if($saveToCSV !== false){
     // Save to CSV file
-    $file = fopen($saveToCSV, 'a');
     $data = array_values($_POST);
     $data = array_merge(array( date("Y-m-d H:i:s")), $data);
-    
-    fputcsv_eol($file, $data,"\n");
-    fclose($file);
   }
 }
 catch(Exception $e){
@@ -94,11 +90,11 @@ if($sendConfirmationToUser !== false){
     // Get the confirmation template from mail.php - if it is false, no confirmation will be sent.
     $confirmationTemplate = file_get_contents($sendConfirmationToUser);
 
-    if($emailMethod == 'phpmail'){ 
-        $transport = Swift_MailTransport::newInstance(); 
+    if($emailMethod == 'phpmail'){
+        $transport = Swift_MailTransport::newInstance();
     }elseif($emailMethod == 'smtp'){
         $transport = Swift_SmtpTransport::newInstance( $outgoingServerAddress, $outgoingServerPort, $outgoingServerSecurity )
-        ->setUsername( $sendingAccountUsername )     
+        ->setUsername( $sendingAccountUsername )
         ->setPassword( $sendingAccountPassword );
     }
     $mailer = Swift_Mailer::newInstance($transport);
@@ -114,7 +110,7 @@ if($sendConfirmationToUser !== false){
           ->setTo(array($_POST[$userEmailField] => $userName))->setBody($confirmationTemplate, 'text/html');
 
          // Send the message or catch an error if it occurs.
-       
+
           $mailer->send($message);
     }else{
         exit;
