@@ -46,11 +46,11 @@
                                             </li>
                                             <br />
                                             <li>
-                                                <a class="inner-link" href="/about.html">About Us</a>
+                                                <a class="inner-link" href="/about.php">About Us</a>
                                             </li>
                                             <br />
                                             <li>
-                                                <a class="inner-link" href="/contact.html">Contact</a>
+                                                <a class="inner-link" href="/contact.php">Contact</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -152,12 +152,12 @@
                       <div class="col-md-7">
                           <ul class="list-inline">
                               <li>
-                                  <a href="/about.html">
+                                  <a href="/about.php">
                                       <span class="h6 type--uppercase">About</span>
                                   </a>
                               </li>
                               <li>
-                                  <a href="/contact.html">
+                                  <a href="/contact.php">
                                       <span class="h6 type--uppercase">Support</span>
                                   </a>
                               </li>

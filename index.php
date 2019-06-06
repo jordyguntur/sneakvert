@@ -47,11 +47,11 @@
                                             </li>
                                             <br />
                                             <li>
-                                                <a class="inner-link" href="/about.html">About Us</a>
+                                                <a class="inner-link" href="/about.php">About Us</a>
                                             </li>
                                             <br />
                                             <li>
-                                                <a class="inner-link" href="/contact.html">Contact</a>
+                                                <a class="inner-link" href="/contact.php">Contact</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -175,13 +175,16 @@
                                     $target_sneaker = $_POST['target_sneaker'];
                                     $shoe_size = $_POST['shoe_size'];
 
+                                    $target_sneaker_trimmed = str_replace('+', '%2B', $target_sneaker);
+                                    $current_sneaker_trimmed = str_replace('+', '%2B', $current_sneaker);
+
                                     // Post request to Sneakvert API
                                     $ch = curl_init();
 
                                     curl_setopt($ch, CURLOPT_URL,"http://108.61.158.17:8080/conversion");
                                     curl_setopt($ch, CURLOPT_POST, 1);
                                     curl_setopt($ch, CURLOPT_POSTFIELDS,
-                                                "current=" . $current_sneaker . "&target=" . $target_sneaker . "&size=" . $shoe_size);
+                                                "current=" . $current_sneaker_trimmed . "&target=" . $target_sneaker_trimmed . "&size=" . $shoe_size);
 
                                     // Receive server response ...
                                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -217,7 +220,7 @@
                                   <?php
                                     if(isset($_POST['submit'])){
                                       echo '<span class="h1 result_text">';
-                                      echo $target_sneaker . ' <br/>(Size ' . $response->target_size . ')';
+                                      echo $target_sneaker . ' <br/>  (Size ' . $response->target_size . ')';
                                       echo '</span>';
                                     }
                                    ?>
@@ -267,12 +270,12 @@
                         <div class="col-md-7">
                             <ul class="list-inline">
                                 <li>
-                                    <a href="/about.html">
+                                    <a href="/about.php">
                                         <span class="h6 type--uppercase">About</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/contact.html">
+                                    <a href="/contact.php">
                                         <span class="h6 type--uppercase">Support</span>
                                     </a>
                                 </li>
