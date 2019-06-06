@@ -34,7 +34,8 @@
                         <div class="col-6">
                             <div class="bar__module">
                                 <a href="index.php">
-                                    <img class="logo-dark" alt="logo" src="img/sneakvert-logo.png" style="max-height: 8em;"/>
+                                    <!-- <img class="logo-dark" alt="logo" src="img/sneakvert-logo.png" style="max-height: 8em;"/> -->
+                                    <img class="logo-dark" alt="logo" src="img/footwear.png" style="max-height: 5em;">
                                 </a>
                             </div>
                             <!--end module-->

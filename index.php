@@ -34,7 +34,8 @@
                         <div class="col-6">
                             <div class="bar__module">
                                 <a href="index.php">
-                                    <img class="logo-dark" alt="logo" src="img/sneakvert-logo.png" style="max-height: 8em;"/>
+                                    <!-- <img class="logo-dark" alt="logo" src="img/sneakvert-logo.png" style="max-height: 8em;"/> -->
+                                    <img class="logo-dark" alt="logo" src="img/footwear.png" style="max-height: 5em;">
                                     <!-- <img class="logo logo-light" alt="logo" src="img/logo-light.png" /> -->
                                 </a>
                             </div>
@@ -106,6 +107,13 @@
                             <span class="h2">
                                 <span class="color--primary">Hi, we're SneakVert</span> a data-driven firm specialising in sneaker conversions. We help you find the perfect pair of kicks.
                             </span>
+                            <div class="modal-instance block" href="#">
+                                <a href="#convert"><div class="video-play-icon video-play-icon--sm bg--primary"></div></a>
+                                <span class="play_button">
+                                  <strong>Find the right sneaker size</strong>&nbsp;&nbsp;&nbsp;</span>
+                                <!--end of modal-container-->
+                            </div>
+
                             <!--end of modal instance-->
                         </div>
                     </div>
@@ -116,7 +124,7 @@
             <section class="unpad elaborate-form-1">
                 <div class="row row--gapless">
                     <div class="col-md-6 height-50 bg--primary">
-                        <div class="pos-vertical-center clearfix row no-gutters justify-content-center">
+                        <div class="pos-vertical-center clearfix row no-gutters justify-content-center" id="convert">
                             <div class="col-lg-8">
                                 <span class="h1">Sneaker Information</span>
                                 <p class="lead">

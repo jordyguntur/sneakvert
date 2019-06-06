@@ -5,6 +5,13 @@
 }
 
 .result_text {
-
   font-weight: 900;
+}
+
+.play_button {
+  position: relative;
+  display: inline-block;
+  margin-left: 0.92857143em;
+  white-space: nowrap;
+  bottom: 22px;
 }
