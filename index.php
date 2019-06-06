@@ -237,7 +237,8 @@
                 </div>
                 <!--end of container-->
             </section>
-            <section class="text-center">
+
+            <!-- <section class="text-center">
                 <div class="container">
                   <div class="row justify-content-center">
                     <div class="col-md-8 col-lg-6">
@@ -262,8 +263,8 @@
                     </form>
                   </div>
                 </div>
-                <!--end of container-->
-            </section>
+            </section> -->
+
             <footer class="text-center-xs space--xs ">
                 <div class="container">
                     <div class="row">
