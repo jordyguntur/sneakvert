@@ -117,26 +117,24 @@
                   <!--end of row-->
               </div>
               <!--end of container-->
-              <!-- data-recaptcha-sitekey="6Ld4P6AUAAAAAPXtcN-wyZomHKUv_sFnUfsiLofB" -->
           </section>
           <section class="text-center ">
-              <div class="container">
+            <div class="container">
                   <div class="row justify-content-center no-gutters">
                       <div class="col-md-8 col-lg-7">
-                          <form name="contact" class="text-left row mx-0" method="POST" data-netlify="true">
+                          <form class="text-left form-email row mx-0" data-success="Thanks for your enquiry, we'll be in touch shortly." data-error="Please fill in all fields correctly." novalidate="true">
                               <div class="col-md-6">
                                   <label>Your Name:</label>
-                                  <input type="text" name="name" required/>
+                                  <input type="text" name="name" class="validate-required">
                               </div>
                               <div class="col-md-6">
                                   <label>Email Address:</label>
-                                  <input type="email" name="email" required/>
+                                  <input type="email" name="email" class="validate-required validate-email">
                               </div>
                               <div class="col-md-12">
                                   <label>Message:</label>
-                                  <textarea rows="6" name="Message" required></textarea>
+                                  <textarea rows="6" name="Message" class="validate-required"></textarea>
                               </div>
-                              <div class="col-md-5 col-lg-4">
                                   <button type="submit" class="btn btn--primary type--uppercase">Send Enquiry</button>
                               </div>
                           </form>
