@@ -28,67 +28,22 @@
     <body class=" ">
         <a id="start"></a>
         <div class="nav-container ">
-            <nav class="bar bar-toggle ">
+            <nav class="bar bar-toggle bar--transparent bar--absolute" data-fixed-at="200">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-6">
+                        <div class="col">
                             <div class="bar__module">
                                 <a href="index.php">
-                                  <!-- <img class="logo-dark" alt="logo" src="img/sneakvert-logo.png" style="max-height: 8em;"/> -->
-                                  <img class="logo-dark" alt="logo" src="img/footwear.png" style="max-height: 5em;">
-                                    <!-- <img class="logo-dark" alt="logo" src="img/sneakvert-logo.png" style="max-height: 8em;"/> -->
+                                  <img class="logo" alt="logo" src="img/sneakvert-logo.png" style="min-height: 10em;"/>
                                 </a>
                             </div>
                             <!--end module-->
                         </div>
-                        <div class="col-6 d-flex justify-content-end">
+                        <div class="col d-flex justify-content-end">
                             <div class="bar__module">
                                 <a class="menu-toggle pull-right" href="#" data-notification-link="sidebar-menu">
                                     <i class="stack-interface stack-menu"></i>
                                 </a>
-                                <div class="notification pos-right pos-top side-menu bg--white notification--reveal notification--dismissed" data-notification-link="sidebar-menu" data-animation="from-right">
-                                    <div class="side-menu__module pos-vertical-center text-right">
-                                        <ul class="menu-vertical">
-                                            <li>
-                                                <a class="inner-link" href="/index.php">Home</a>
-                                            </li>
-                                            <br />
-                                            <li>
-                                                <a class="inner-link" href="/about.php">About Us</a>
-                                            </li>
-                                            <br />
-                                            <li>
-                                                <a class="inner-link" href="/contact.php">Contact</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <!--end module-->
-                                    <div class="side-menu__module pos-bottom pos-absolute col-12 text-right">
-                                        <ul class="social-list list-inline text-right list--hover">
-                                            <li>
-                                                <a href="#">
-                                                    <i class="socicon socicon-google icon icon--xs"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="socicon socicon-twitter icon icon--xs"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="socicon socicon-facebook icon icon--xs"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="socicon socicon-instagram icon icon--xs"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                  <div class="notification-close-cross notification-close"></div>
-                                </div>
                             </div>
                             <!--end module-->
                         </div>
@@ -98,12 +53,54 @@
                 </div>
                 <!--end of container-->
             </nav>
+            <div class="notification pos-right pos-top side-menu bg--white" data-notification-link="sidebar-menu" data-animation="from-right">
+                <div class="side-menu__module pos-vertical-center text-right">
+                    <ul class="menu-vertical">
+                      <li>
+                          <a class="inner-link" href="/index.php">Home</a>
+                      </li>
+                      <br />
+                      <li>
+                          <a class="inner-link" href="/about.php">About Us</a>
+                      </li>
+                      <br />
+                      <li>
+                          <a class="inner-link" href="/contact.php">Contact</a>
+                      </li>
+                    </ul>
+                </div>
+                <!--end module-->
+                <!-- <div class="side-menu__module pos-bottom pos-absolute col-12 text-right">
+                    <ul class="social-list list-inline text-right list--hover">
+                        <li>
+                            <a href="#">
+                                <i class="socicon socicon-google icon icon--xs"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="socicon socicon-twitter icon icon--xs"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="socicon socicon-facebook icon icon--xs"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="socicon socicon-instagram icon icon--xs"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div> -->
+            </div>
         </div>
         <div class="main-container">
           <section class="text-center">
               <div class="container">
                   <div class="row justify-content-center">
-                      <div class="col-md-10 col-lg-8">
+                      <div class="col-md-10 col-lg-8" style="margin-top: 10em;">
                           <h2>Data-driven conversions</h2>
                           <p class="lead">
                             Far too often people cannot purchase shoes because they truly do not know what size they are in a particular brand.
@@ -126,13 +123,13 @@
                           <div class="slider border--round" data-arrows="true" data-paging="true">
                               <ul class="slides">
                                   <li>
-                                      <img alt="Image" src="img/gallery-1.jpg" />
+                                      <img alt="Image" src="img/sneaker-5.jpg" />
                                   </li>
                                   <li>
-                                      <img alt="Image" src="img/cowork-1.jpg" />
+                                      <img alt="Image" src="img/sneaker-6.jpg" />
                                   </li>
                                   <li>
-                                      <img alt="Image" src="img/cowork-5.jpg" />
+                                      <img alt="Image" src="img/sneaker-7.jpg" />
                                   </li>
                               </ul>
                           </div>
@@ -159,7 +156,7 @@
                               </li>
                           </ul>
                       </div>
-                      <div class="col-md-5 text-right text-center-xs">
+                      <!-- <div class="col-md-5 text-right text-center-xs">
                           <ul class="social-list list-inline list--hover">
                               <li>
                                   <a href="#">
@@ -182,7 +179,7 @@
                                   </a>
                               </li>
                           </ul>
-                      </div>
+                      </div> -->
                   </div>
                   <!--end of row-->
                   <div class="row">

@@ -20,8 +20,8 @@ $sendingAccountUsername     = 'jordy.guntur@gmail.com';
 $sendingAccountPassword     = 'ShokugekiNoSoma1!';
 
 // Recipient (To:) Details  - Change this to the email details of who will receive all the emails from the website.
-$recipientEmail             = 'jordy.guntur@gmail.com'; // REQUIRED value.
-$recipientName              = 'Jordy Guntur';             // REQUIRED value.
+$recipientEmail             = 'info@sneakvertsociety.com'; // REQUIRED value.
+$recipientName              = 'SneakVert';             // REQUIRED value.
 
 // Email details            - Change these to suit your website needs
 $emailSubject               = 'Message From SneakVert Society Contact Form'; // REQUIRED value. Subject of the email that the recipient will see

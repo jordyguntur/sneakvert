@@ -28,66 +28,22 @@
     <body class=" ">
         <a id="start"></a>
         <div class="nav-container ">
-            <nav class="bar bar-toggle ">
+            <nav class="bar bar-toggle bar--transparent bar--absolute" data-fixed-at="200">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-6">
+                        <div class="col">
                             <div class="bar__module">
                                 <a href="index.php">
-                                    <!-- <img class="logo-dark" alt="logo" src="img/sneakvert-logo.png" style="max-height: 8em;"/> -->
-                                    <img class="logo-dark" alt="logo" src="img/footwear.png" style="max-height: 5em;">
+                                    <img class="logo" alt="logo" src="img/sneakvert-logo.png" style="min-height: 10em;"/>
                                 </a>
                             </div>
                             <!--end module-->
                         </div>
-                        <div class="col-6 d-flex justify-content-end">
+                        <div class="col d-flex justify-content-end">
                             <div class="bar__module">
                                 <a class="menu-toggle pull-right" href="#" data-notification-link="sidebar-menu">
                                     <i class="stack-interface stack-menu"></i>
                                 </a>
-                                <div class="notification pos-right pos-top side-menu bg--white notification--reveal notification--dismissed" data-notification-link="sidebar-menu" data-animation="from-right">
-                                    <div class="side-menu__module pos-vertical-center text-right">
-                                        <ul class="menu-vertical">
-                                            <li>
-                                                <a class="inner-link" href="/index.php">Home</a>
-                                            </li>
-                                            <br />
-                                            <li>
-                                                <a class="inner-link" href="/about.php">About Us</a>
-                                            </li>
-                                            <br />
-                                            <li>
-                                                <a class="inner-link" href="/contact.php">Contact</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <!--end module-->
-                                    <div class="side-menu__module pos-bottom pos-absolute col-12 text-right">
-                                        <ul class="social-list list-inline text-right list--hover">
-                                            <li>
-                                                <a href="#">
-                                                    <i class="socicon socicon-google icon icon--xs"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="socicon socicon-twitter icon icon--xs"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="socicon socicon-facebook icon icon--xs"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="socicon socicon-instagram icon icon--xs"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                  <div class="notification-close-cross notification-close"></div>
-                                </div>
                             </div>
                             <!--end module-->
                         </div>
@@ -97,21 +53,64 @@
                 </div>
                 <!--end of container-->
             </nav>
+            <div class="notification pos-right pos-top side-menu bg--white" data-notification-link="sidebar-menu" data-animation="from-right">
+                <div class="side-menu__module pos-vertical-center text-right">
+                    <ul class="menu-vertical">
+                      <li>
+                          <a class="inner-link" href="/index.php">Home</a>
+                      </li>
+                      <br />
+                      <li>
+                          <a class="inner-link" href="/about.php">About Us</a>
+                      </li>
+                      <br />
+                      <li>
+                          <a class="inner-link" href="/contact.php">Contact</a>
+                      </li>
+                    </ul>
+                </div>
+                <!--end module-->
+                <!-- <div class="side-menu__module pos-bottom pos-absolute col-12 text-right">
+                    <ul class="social-list list-inline text-right list--hover">
+                        <li>
+                            <a href="#">
+                                <i class="socicon socicon-google icon icon--xs"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="socicon socicon-twitter icon icon--xs"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="socicon socicon-facebook icon icon--xs"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="socicon socicon-instagram icon icon--xs"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div> -->
+            </div>
         </div>
         <div class="main-container">
-          <section class="text-center ">
-              <div class="container">
+          <section class="text-center">
+              <div class="container" style="margin-top: 10em;">
                   <div class="row justify-content-center">
                       <div class="col-md-12 col-12 mb-5">
-                          <div class="map-container border--round" data-maps-api-key="AIzaSyDHdZcwXRxfbbuwJ_TQtyz52qOb_zHN3es" data-address="11 Park Pl, New York, NY 10007" data-marker-title="Stack" data-map-style="[{&quot;featureType&quot;:&quot;landscape&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#FFBB00&quot;},{&quot;saturation&quot;:43.400000000000006},{&quot;lightness&quot;:37.599999999999994},{&quot;gamma&quot;:1}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#FFC200&quot;},{&quot;saturation&quot;:-61.8},{&quot;lightness&quot;:45.599999999999994},{&quot;gamma&quot;:1}]},{&quot;featureType&quot;:&quot;road.arterial&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#FF0300&quot;},{&quot;saturation&quot;:-100},{&quot;lightness&quot;:51.19999999999999},{&quot;gamma&quot;:1}]},{&quot;featureType&quot;:&quot;road.local&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#FF0300&quot;},{&quot;saturation&quot;:-100},{&quot;lightness&quot;:52},{&quot;gamma&quot;:1}]},{&quot;featureType&quot;:&quot;water&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#0078FF&quot;},{&quot;saturation&quot;:-13.200000000000003},{&quot;lightness&quot;:2.4000000000000057},{&quot;gamma&quot;:1}]},{&quot;featureType&quot;:&quot;poi&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#00FF6A&quot;},{&quot;saturation&quot;:-1.0989010989011234},{&quot;lightness&quot;:11.200000000000017},{&quot;gamma&quot;:1}]}]" data-map-zoom="15"></div>
+                          <div class="map-container border--round" data-maps-api-key="AIzaSyDHdZcwXRxfbbuwJ_TQtyz52qOb_zHN3es" data-address="85 Broad Street, New York, NY 10004" data-marker-title="Stack" data-map-style="[{&quot;featureType&quot;:&quot;landscape&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#FFBB00&quot;},{&quot;saturation&quot;:43.400000000000006},{&quot;lightness&quot;:37.599999999999994},{&quot;gamma&quot;:1}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#FFC200&quot;},{&quot;saturation&quot;:-61.8},{&quot;lightness&quot;:45.599999999999994},{&quot;gamma&quot;:1}]},{&quot;featureType&quot;:&quot;road.arterial&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#FF0300&quot;},{&quot;saturation&quot;:-100},{&quot;lightness&quot;:51.19999999999999},{&quot;gamma&quot;:1}]},{&quot;featureType&quot;:&quot;road.local&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#FF0300&quot;},{&quot;saturation&quot;:-100},{&quot;lightness&quot;:52},{&quot;gamma&quot;:1}]},{&quot;featureType&quot;:&quot;water&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#0078FF&quot;},{&quot;saturation&quot;:-13.200000000000003},{&quot;lightness&quot;:2.4000000000000057},{&quot;gamma&quot;:1}]},{&quot;featureType&quot;:&quot;poi&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#00FF6A&quot;},{&quot;saturation&quot;:-1.0989010989011234},{&quot;lightness&quot;:11.200000000000017},{&quot;gamma&quot;:1}]}]" data-map-zoom="15"></div>
                       </div>
                       <div class="col-md-8 col-lg-6 col-12">
-                          <h3>11 Park Pl
-                              <br />New York, NY 10007</h3>
+                          <h3>85 Broad Street
+                              <br />New York, NY 10004</h3>
                           <p class="lead">
                               E:
                               <a href="#">info@sneakvertsociety.com</a>
-                              <br /> P: +1 (123) 456 7890
+                              <br /> P: +1 (646) 752 0073
+                              <br /> P: +1 (954) 801 8847
                           </p>
                           <p class="lead">
                               Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours on business days.
@@ -168,7 +167,7 @@
                               </li>
                           </ul>
                       </div>
-                      <div class="col-md-5 text-right text-center-xs">
+                      <!-- <div class="col-md-5 text-right text-center-xs">
                           <ul class="social-list list-inline list--hover">
                               <li>
                                   <a href="#">
@@ -191,7 +190,7 @@
                                   </a>
                               </li>
                           </ul>
-                      </div>
+                      </div> -->
                   </div>
                   <!--end of row-->
                   <div class="row">

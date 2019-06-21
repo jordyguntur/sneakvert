@@ -28,67 +28,22 @@
     <body class=" ">
         <a id="start"></a>
         <div class="nav-container ">
-            <nav class="bar bar-toggle ">
+            <nav class="bar bar-toggle bar--transparent bar--absolute" data-fixed-at="200">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-6">
+                        <div class="col">
                             <div class="bar__module">
                                 <a href="index.php">
-                                    <!-- <img class="logo-dark" alt="logo" src="img/sneakvert-logo.png" style="max-height: 8em;"/> -->
-                                    <img class="logo-dark" alt="logo" src="img/footwear.png" style="max-height: 5em;">
-                                    <!-- <img class="logo logo-light" alt="logo" src="img/logo-light.png" /> -->
+                                  <img class="logo" alt="logo" src="img/sneakvert-logo-white.png" style="min-height: 10em;"/>
                                 </a>
                             </div>
                             <!--end module-->
                         </div>
-                        <div class="col-6 d-flex justify-content-end">
+                        <div class="col d-flex justify-content-end">
                             <div class="bar__module">
                                 <a class="menu-toggle pull-right" href="#" data-notification-link="sidebar-menu">
                                     <i class="stack-interface stack-menu"></i>
                                 </a>
-                                <div class="notification pos-right pos-top side-menu bg--white notification--reveal notification--dismissed" data-notification-link="sidebar-menu" data-animation="from-right">
-                                    <div class="side-menu__module pos-vertical-center text-right">
-                                        <ul class="menu-vertical">
-                                            <li>
-                                                <a class="inner-link" href="/index.php">Home</a>
-                                            </li>
-                                            <br />
-                                            <li>
-                                                <a class="inner-link" href="/about.php">About Us</a>
-                                            </li>
-                                            <br />
-                                            <li>
-                                                <a class="inner-link" href="/contact.php">Contact</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <!--end module-->
-                                    <div class="side-menu__module pos-bottom pos-absolute col-12 text-right">
-                                        <ul class="social-list list-inline text-right list--hover">
-                                            <li>
-                                                <a href="#">
-                                                    <i class="socicon socicon-google icon icon--xs"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="socicon socicon-twitter icon icon--xs"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="socicon socicon-facebook icon icon--xs"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="socicon socicon-instagram icon icon--xs"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                  <div class="notification-close-cross notification-close"></div>
-                                </div>
                             </div>
                             <!--end module-->
                         </div>
@@ -98,37 +53,79 @@
                 </div>
                 <!--end of container-->
             </nav>
+            <div class="notification pos-right pos-top side-menu bg--white" data-notification-link="sidebar-menu" data-animation="from-right">
+                <div class="side-menu__module pos-vertical-center text-right">
+                    <ul class="menu-vertical">
+                      <li>
+                          <a class="inner-link" href="/index.php">Home</a>
+                      </li>
+                      <br />
+                      <li>
+                          <a class="inner-link" href="/about.php">About Us</a>
+                      </li>
+                      <br />
+                      <li>
+                          <a class="inner-link" href="/contact.php">Contact</a>
+                      </li>
+                    </ul>
+                </div>
+                <!--end module-->
+                <!-- <div class="side-menu__module pos-bottom pos-absolute col-12 text-right">
+                    <ul class="social-list list-inline text-right list--hover">
+                        <li>
+                            <a href="#">
+                                <i class="socicon socicon-google icon icon--xs"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="socicon socicon-twitter icon icon--xs"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="socicon socicon-facebook icon icon--xs"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="socicon socicon-instagram icon icon--xs"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div> -->
+            </div>
         </div>
         <div class="main-container">
-            <section class="cover height-60">
-                <div class="container pos-vertical-center">
-                    <div class="row">
-                        <div class="col-md-11 col-lg-8">
-                            <span class="h2">
-                                <span class="color--primary">Hi, we're SneakVert</span> a data-driven firm specialising in sneaker conversions. We help you find the perfect pair of kicks.
-                            </span>
-                            <div class="modal-instance block" href="#">
-                                <a href="#convert"><div class="video-play-icon video-play-icon--sm bg--primary"></div></a>
-                                <span class="play_button">
-                                  <strong>Find the right sneaker size</strong>&nbsp;&nbsp;&nbsp;</span>
-                                <!--end of modal-container-->
-                            </div>
-
-                            <!--end of modal instance-->
-                        </div>
-                    </div>
-                    <!--end of row-->
-                </div>
-                <!--end of container-->
-            </section>
+          <section class="height-100 imagebg parallax" data-overlay="5">
+              <div class="background-image-holder">
+                  <img alt="background" src="img/sneaker-3.jpg" />
+              </div>
+              <div class="container pos-vertical-center">
+                  <div class="row">
+                      <div class="col-md-12">
+                          <p class="h2">
+                              An data-driven company specialising in analytics and conversions for sneakers. We connect research, data and experimentation to help you find the perfect pair of kicks.
+                          </p>
+                          <div class="col-4" style="padding-left: 0;">
+                            <a class="btn btn--primary-2 btn--lg" href="#convert">
+                              <span class="btn__text">Try our conversion tool</span>
+                            </a>
+                          </div>
+                      </div>
+                  </div>
+                  <!--end of row-->
+              </div>
+              <!--end of container-->
+          </section>
             <section class="unpad elaborate-form-1">
                 <div class="row row--gapless">
-                    <div class="col-md-6 height-50 bg--primary">
+                    <div class="col-md-6 height-50">
                         <div class="pos-vertical-center clearfix row no-gutters justify-content-center" id="convert">
                             <div class="col-lg-8">
                                 <span class="h1">Sneaker Information</span>
                                 <p class="lead">
-                                    Enter information about your <i>current sneaker</i> and <i>size</i> to find out which size you should purchase for your next pair.
+                                    <!-- Enter information about your <i>current sneaker</i> and <i>size</i> to find out which size you should purchase for your next pair. -->
                                 </p>
                                 <form action="#" method="post">
                                     <div class="row">
@@ -179,7 +176,7 @@
                                           </div>
                                         </div>
                                         <div class="col-md-5 col-6">
-                                            <button type="submit" name="submit" class="btn btn--primary-1">Convert</button>
+                                            <button type="submit" name="submit" class="btn">Convert</button>
                                         </div>
                                     </div>
                                 </form>
@@ -214,20 +211,25 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 height-50 bg--primary-1">
+                    <div class="col-md-6 height-50 bg--primary-2">
                         <div class="pos-vertical-center clearfix row no-gutters justify-content-center">
                             <div class="col-lg-8">
-                                <span class="h1 target_text">
+
                                   <?php
                                     if(isset($_POST['submit'])){
-                                      echo 'You currently wear an <br /><strong>' . $current_sneaker . ' (Size  ' .  $shoe_size . ') ';
+                                      echo '<span class="h1 target_text">You currently wear an <br /><strong>' . $current_sneaker . ' (Size  ' .  $shoe_size . ') </span>';
+                                    } else {
+                                      echo '<span class="h1">How it works</span>
+                                      <p class="lead">
+                                          Enter information about your current sneaker and size to find out which size you should purchase for your next pair.
+                                      </p>';
                                     }
                                    ?>
-                                </span>
+
                                 <p class="lead">
                                     <?php
                                       if(isset($_POST['submit'])){
-                                        echo 'Based on our data and sneaker conversion analysis, we recommend an:';
+                                        echo 'Based on our data, your target sneaker is:';
                                       }
                                     ?>
                                 </p>
@@ -245,7 +247,7 @@
             </section>
             <section class="video video-1 text-center imagebg space--lg" data-overlay="3">
                 <div class="background-image-holder">
-                    <img alt="background" src="img/cowork-1.jpg" />
+                    <img alt="background" src="img/sneaker-4.jpg" />
                 </div>
                 <div class="container">
                 </div>
@@ -296,7 +298,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-md-5 text-right text-center-xs">
+                        <!-- <div class="col-md-5 text-right text-center-xs">
                             <ul class="social-list list-inline list--hover">
                                 <li>
                                     <a href="#">
@@ -319,7 +321,7 @@
                                     </a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                     <!--end of row-->
                     <div class="row">
