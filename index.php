@@ -127,7 +127,7 @@
                                 <p class="lead">
                                     <!-- Enter information about your <i>current sneaker</i> and <i>size</i> to find out which size you should purchase for your next pair. -->
                                 </p>
-                                <form action="#" method="post">
+                                <form action="#convert" method="post">
                                     <div class="row">
                                         <div class="col-md-12">
                                           <div class="input-select">
