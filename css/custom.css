@@ -15,3 +15,28 @@
   white-space: nowrap;
   bottom: 22px;
 }
+
+@media all and (max-width: 991px) {
+  .bar-m {
+    z-index: 99;
+    width: 100%;
+    background: none;
+    position: absolute;
+  }
+}
+
+@media all and (max-width: 766px) {
+  .p-20 {
+    padding-top: 20em;
+  }
+
+  .btn-top {
+    margin-top: 0em;
+  }
+}
+
+@media all and (min-width: 991px) {
+  .m-8 {
+    margin-top: 8em !important;
+  }
+}

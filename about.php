@@ -100,7 +100,7 @@
           <section class="text-center">
               <div class="container">
                   <div class="row justify-content-center">
-                      <div class="col-md-10 col-lg-8" style="margin-top: 10em;">
+                      <div class="col-md-10 col-lg-8 m-8">
                           <h2>Data-driven conversions</h2>
                           <p class="lead">
                             Far too often people cannot purchase shoes because they truly do not know what size they are in a particular brand.

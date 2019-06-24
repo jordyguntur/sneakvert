@@ -28,7 +28,7 @@
     <body class=" ">
         <a id="start"></a>
         <div class="nav-container ">
-            <nav class="bar bar-toggle bar--transparent bar--absolute" data-fixed-at="200">
+            <nav class="bar bar-toggle bar--transparent bar--absolute bar-m" data-fixed-at="200">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col">
@@ -97,7 +97,7 @@
             </div>
         </div>
         <div class="main-container">
-          <section class="height-100 imagebg parallax" data-overlay="5">
+          <section class="height-100 imagebg parallax p-20" data-overlay="5">
               <div class="background-image-holder">
                   <img alt="background" src="img/sneaker-3.jpg" />
               </div>
@@ -120,7 +120,7 @@
           </section>
             <section class="unpad elaborate-form-1">
                 <div class="row row--gapless">
-                    <div class="col-md-6 height-50">
+                    <div class="col-md-6 height-50 p-mobile">
                         <div class="pos-vertical-center clearfix row no-gutters justify-content-center" id="convert">
                             <div class="col-lg-8">
                                 <span class="h1">Sneaker Information</span>
@@ -176,7 +176,7 @@
                                           </div>
                                         </div>
                                         <div class="col-md-5 col-6">
-                                            <button type="submit" name="submit" class="btn">Convert</button>
+                                            <button type="submit" name="submit" class="btn btn-top">Convert</button>
                                         </div>
                                     </div>
                                 </form>
