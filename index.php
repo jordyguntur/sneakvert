@@ -104,7 +104,7 @@
               <div class="container pos-vertical-center">
                   <div class="row">
                       <div class="col-md-12">
-                        <img alt="logo" src="img/sneakvert-test.png" />
+                        <img alt="logo" src="img/sneakvert-test.png" style="max-height: 8rem"/>
                           <p class="h2">
                               An data-driven company specialising in analytics and conversions for sneakers. We connect research, data and experimentation to help you find the perfect pair of kicks.
                           </p>
