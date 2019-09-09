@@ -37,7 +37,8 @@
                     <div class="col">
                         <div class="bar__module">
                             <a href="index.php">
-                                <img class="logo" alt="logo" src="img/sneakvert-logo.png" style="min-height: 10em;" />
+                                <img class="logo" alt="logo" src="img/sneakvert-logo-4-color.png"
+                                    style="max-height: 6em; margin-top: 4em;" />
                             </a>
                         </div>
                         <!--end module-->

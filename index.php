@@ -37,8 +37,8 @@
                     <div class="col">
                         <div class="bar__module">
                             <a href="index.php">
-                                <img class="logo" alt="logo" src="img/sneakvert-logo-white.png"
-                                    style="min-height: 10em;" />
+                                <img class="logo" alt="logo" src="img/sneakvert-logo-4.png"
+                                    style="max-height: 6em; margin-top: 4em;" />
                             </a>
                         </div>
                         <!--end module-->
@@ -113,7 +113,7 @@
             <div class="container pos-vertical-center">
                 <div class="row">
                     <div class="col-md-12">
-                        <!-- <img alt="logo" src="img/sneakvert-test.png" style="max-height: 8rem"/> -->
+                        <img alt="logo" src="img/sneakvert-logo-3.png" style="max-height: 7; margin-bottom: 5em;" />
                         <p class="h2">
                             An data-driven company specialising in analytics and conversions for sneakers. We connect
                             research, data and experimentation to help you find the perfect pair of kicks.
