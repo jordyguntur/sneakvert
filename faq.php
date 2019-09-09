@@ -105,70 +105,66 @@
         </div>
     </div>
     <div class="main-container">
-        <section class="text-center">
-            <div class="container">
+        <section class="text-left" style="padding-bottom: 3em">
+            <div class="container m-8">
                 <div class="row justify-content-center">
-                    <div class="col-md-10 col-lg-8 m-8">
-                        <h2>Data-driven conversions</h2>
-                        <p class="lead">
-                            Far too often people cannot purchase shoes because they truly do not know what size they are
-                            in a particular brand.
-                        </p>
-                        <p class="lead"><strong>Those days are over.</strong></p>
-                        <p class="lead">
-                            With SneakVert Society’s new conversion tool, with a few clicks, all your shoe sizing issues
-                            will be resolved. SneakVert Society has provided shoe lovers with a unique blend of real
-                            data entries that will allow you to pick a shoe you are familiar with and accurately convert
-                            it into your desired shoe.
-                        </p>
-
+                    <div class="col-md-12 col-lg-12 col-12" style="margin-top: 3em">
+                        <h1>Frequently Asked Questions</h1>
+                        <br />
+                        <h2>1. Don't see your sneaker on the lists?</h2>
+                        <h4>If you can't find a sneaker that you're looking for shoot us a message below and we'll work
+                            on updating our data stores. </h4>
                     </div>
+                    <!--end of row-->
                 </div>
-                <!--end of row-->
-            </div>
-            <!--end of container-->
+                <!--end of container-->
         </section>
-        <section class="text-center">
+        <section class="text-left">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-11">
-                        <div class="slider border--round" data-arrows="true" data-paging="true">
-                            <ul class="slides">
-                                <li>
-                                    <img alt="Image" src="img/sneaker-5.jpg" />
-                                </li>
-                                <li>
-                                    <img alt="Image" src="img/sneaker-6.jpg" />
-                                </li>
-                                <li>
-                                    <img alt="Image" src="img/sneaker-7.jpg" />
-                                </li>
-                            </ul>
-                        </div>
+                <div class="row justify-content-center no-gutters">
+                    <div class="col-md-12 col-lg-12">
+                        <form class="text-left form-email row mx-0"
+                            data-success="Thanks for your enquiry, we'll be in touch shortly."
+                            data-error="Please fill in all fields correctly." novalidate="true">
+                            <div class="col-md-6">
+                                <label>Your Name:</label>
+                                <input type="text" name="name" class="validate-required">
+                            </div>
+                            <div class="col-md-6">
+                                <label>Email Address:</label>
+                                <input type="email" name="email" class="validate-required validate-email">
+                            </div>
+                            <div class="col-md-12">
+                                <label>Message:</label>
+                                <textarea rows="6" name="Message" class="validate-required"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn--primary type--uppercase">Send Question</button>
                     </div>
+                    </form>
                 </div>
-                <!--end of row-->
             </div>
-            <!--end of container-->
-        </section>
-        <footer class="text-center-xs space--xs ">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-7">
-                        <ul class="list-inline">
-                            <li>
-                                <a href="/about.php">
-                                    <span class="h6 type--uppercase">About</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/contact.php">
-                                    <span class="h6 type--uppercase">Support</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- <div class="col-md-5 text-right text-center-xs">
+            <!--end of row-->
+    </div>
+    <!--end of container-->
+    </section>
+    <footer class="text-center-xs space--xs ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <ul class="list-inline">
+                        <li>
+                            <a href="/about.php">
+                                <span class="h6 type--uppercase">About</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/contact.php">
+                                <span class="h6 type--uppercase">Support</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- <div class="col-md-5 text-right text-center-xs">
                           <ul class="social-list list-inline list--hover">
                               <li>
                                   <a href="#">
@@ -192,23 +188,23 @@
                               </li>
                           </ul>
                       </div> -->
-                </div>
-                <!--end of row-->
-                <div class="row">
-                    <div class="col-md-7">
-                        <span class="type--fine-print">&copy;
-                            <span class="update-year"></span> SneakVert LLC.</span>
-                        <a class="type--fine-print" href="#">Privacy Policy</a>
-                        <a class="type--fine-print" href="#">Legal</a>
-                    </div>
-                    <div class="col-md-5 text-right text-center-xs">
-                        <p class="type--fine-print" href="#">info@sneakvertsociety.com</p>
-                    </div>
-                </div>
-                <!--end of row-->
             </div>
-            <!--end of container-->
-        </footer>
+            <!--end of row-->
+            <div class="row">
+                <div class="col-md-7">
+                    <span class="type--fine-print">&copy;
+                        <span class="update-year"></span> SneakVert LLC.</span>
+                    <a class="type--fine-print" href="#">Privacy Policy</a>
+                    <a class="type--fine-print" href="#">Legal</a>
+                </div>
+                <div class="col-md-5 text-right text-center-xs">
+                    <p class="type--fine-print" href="#">info@sneakvertsociety.com</p>
+                </div>
+            </div>
+            <!--end of row-->
+        </div>
+        <!--end of container-->
+    </footer>
     </div>
     <!--<div class="loader"></div>-->
     <a class="back-to-top inner-link" href="#start" data-scroll-class="100vh:active">
